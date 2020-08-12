@@ -854,9 +854,9 @@ public struct DownsamplingImageProcessor: ImageProcessor {
     /// Creates a `DownsamplingImageProcessor`.
     ///
     /// - Parameter size: The target size of the downsample operation.
-    public init(size: CGSize) {
+    public init(size: CGSize, identifier: String? = nil) {
         self.size = size
-        self.identifier = "com.onevcat.Kingfisher.DownsamplingImageProcessor(\(size))"
+        self.identifier = identifier ?? "com.onevcat.Kingfisher.DownsamplingImageProcessor(\(size))"
     }
     
     /// Processes the input `ImageProcessItem` with this processor.
